@@ -136,7 +136,9 @@ public class WebServices {
 			
 			devicesRep.save(currentDevice);
 			
-			ret.setMessage("Novo Dispositivo cadastrado com sucesso");
+			ret.setMessage("Dispositivo alterado com sucesso");
+			
+			logger.info("Device updated: " + update.getName());
 			
 		} catch (Exception e) {
 			
@@ -189,6 +191,7 @@ public class WebServices {
 						devicesRep.save(onOffDevice);
 					}
 					
+					logger.info("Device switched on/off");					
 					
 				} else {
 					
